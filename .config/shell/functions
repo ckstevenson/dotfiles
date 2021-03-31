@@ -1,0 +1,58 @@
+rmunzip(){ unzip $1 | xargs rm -rf; }
+
+update_dot(){
+    cp -u /etc/X11/xorg.conf.d ~/.git/dotfiles/
+    cp -u ~/.bashrc ~/.git/dotfiles/
+    cp -u ~/.bash_profile ~/.git/dotfiles/
+    cp -u ~/.profile ~/.git/dotfiles/
+    cp -u ~/.vimrc ~/.git/dotfiles/
+    cp -u ~/.xinitrc ~/.git/dotfiles/
+    cp -u ~/.gtkrc-2.0 ~/.git/dotfiles/
+    cp -u ~/.Xdefaults ~/.git/dotfiles/
+    cp -u ~/.Xmodmap ~/.git/dotfiles/
+    cp -u ~/.Xresources ~/.git/dotfiles/
+    cp -u ~/.tmux.conf ~/.git/dotfiles/
+    cp -u ~/.xinitrc ~/.git/dotfiles/
+    cp -rauv ~/.scripts ~/.git/dotfiles/
+    cp -rauv ~/.irssi ~/.git/dotfiles/
+    cp -rauv ~/.password-store ~/.git/dotfiles/
+    cp -u ~/.config/mimeapps.list ~/.git/dotfiles/.config/
+    cp -u ~/.config/wall.png ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/i3 ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/gtk-3.0 ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/zathura ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/i3blocks ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/fontconfig ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/mutt ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/ranger ~/.git/dotfiles/.config/
+    cp -rauv ~/.config/termite ~/.git/dotfiles/.config/
+}
+
+mcrypt(){
+    for f in $(ls /mnt); do
+        echo "$f"
+    done
+    echo Mount to which dir?
+    read dir
+    sudo cryptsetup luksOpen /dev/$1 $dir
+    sudo mount /dev/mapper/$dir /mnt/$dir
+}
+
+ucrypt(){
+    echo Unmount which encrypted mount point?
+    for f in $(ls /mnt); do
+        echo "$f"
+    done
+    read mpoint
+    sudo umount /mnt/$mpoint
+    sudo cryptsetup luksClose $mpoint
+}
+
+lsg() {
+  keyword=$(echo "$@" |  sed 's/ /.*/g')
+  ls -hlA --color=yes \
+  | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(" %0o ",k);print}' \
+  | grep -iE $keyword
+}
+
+man2txt(){ man "$@" | col -bx ;}

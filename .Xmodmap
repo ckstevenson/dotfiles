@@ -1,0 +1,23 @@
+!! No Caps Lock
+clear lock
+!! Make Caps_lock an escape key.
+keycode 66 = Escape
+!! map right alt to mode switch
+!!keysym Alt_R = Mode_switch
+keycode 107 = Super_R
+keycode 135 = Super_R
+!!keysym Mode_switch = Alt_R
+!! re-map for umlaus and eszett
+!!keycode 32 = o O odiaeresis Odiaeresis
+!!keycode 30 = u U udiaeresis Udiaeresis
+!!keycode 38 = a A adiaeresis Adiaeresis
+!!keycode 39 = s S ssharp ssharp
+!! shift backspace is delete for my crapbook
+!!keycode 22 = BackSpace Delete BackSpace BackSpace
+!! Add scroll key
+!!keycode 212 = Scroll_Lock
+!! Page up for up arrow
+!!keycode  111 = Up Page_Up Up
+!! Page down for down arrow
+!!keycode  116 = Down Page_Down Down
+

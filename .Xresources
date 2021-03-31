@@ -1,0 +1,31 @@
+! special
+!*.font:	mono:pixelsize=8:antialias=true:autohint=true;
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #7d38d8
+dmenu.selbackground:    #1d1f21
+dmenu.selforeground:    #128aed
+! Black + DarkGrey
+*color0:  #000000
+*color8:  #555555
+! DarkGreen + Green
+*.color2:  #90a959
+*.color10: #90a959
+! DarkRed + Red
+*color1:  #fc5d58
+*color9:  #fc5d58
+! DarkYellow + Yellow
+*color3:  #f4bf75
+*color11: #f4bf75
+! DarkBlue + Blue
+*color4:  #128aed
+*color12: #128aed
+! DarkMagenta + Magenta
+*color5:  #7d38d8
+*color13: #7d38d8
+!DarkCyan + Cyan (both not tango)
+*color6:  #46d0e2
+*color14: #46d0e2
+! LightGrey + White
+*color7:  #c5c8c6
+*color15: #ffffff

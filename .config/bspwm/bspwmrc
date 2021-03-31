@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# Autostart
+for i in polybar sxhkd unclutter
+do
+    killall $i
+done
+
+xrdb $HOME/.Xresources &
+xmodmap $HOME/.Xmodmap &
+polybar default &
+unclutter &
+sxhkd &
+unclutter &
+numlockx &
+pgrep bspswallow || bspswallow &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+[ $LAYOUT == "dgpu" ] && xrandr --output DP-0.1 --primary --output eDP-1-1 --off; nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+
+setbg
+
+# Unused monitors
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
+
+# Colors
+bspc config active_border_color "#128aed"
+bspc config focused_border_color "#7d38d8"
+bspc config presel_feedback_color "#000000"
+
+# Monocle
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Tiling
+bspc config automatic_scheme spiral
+bspc config initial_polarity second_child
+
+# Pointer configurations
+bspc config pointer_modifier shift
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config focus_follows_pointer true
+bspc config pointer_follows_monitor true
+
+# Window rules
+bspc rule -a Lxappearance state=floating
+bspc rule -a Zathura state=tiled
+bspc rule -a Chromium:mail.google.com__mail_u_0 -o node=@^1:^9:/1
+bspc rule -a Chromium:calendar.google.com__calendar_u_0_r -o node=@^1:^9:/2
+bspc rule -a Slack:slack -o node=@^1:^10:/1
+bspc rule -a Chromium:chat.google.com__dm_q9HBbAAAAAE -o node=@^1:^10:/2/1
+bspc rule -a Chromium:web.whatsapp.com -o node=@^1:^10:/2/2

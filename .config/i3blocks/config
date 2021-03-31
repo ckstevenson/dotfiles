@@ -1,0 +1,62 @@
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+script_dir=/usr/lib/i3blocks/
+
+[weather]
+command=curl -Ss 'https://wttr.in/Flensburg?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
+[memory]
+label= 
+interval=30
+command=$script_dir/memory/memory
+
+[load_average]
+interval=10
+label= 
+command=$script_dir/load_average/load_average
+
+#[disk]
+#label= 
+#interval=300
+#command=$script_dir/disk-io/disk-io
+
+[temperature]
+label= CPU 
+command=$script_dir/temperature/temperature
+interval=10
+separator=false
+
+[temperature]
+label= GPU 
+command=$script_dir/temperature/temperature --chip amdgpu-pci-0100
+interval=10
+
+[iface]
+label= 
+color=#00FF00
+interval=10
+command=$script_dir/iface/iface
+
+#[iface]
+#label=VPN
+#command=~/.scripts/pulse_vpn.sh
+#interval=10
+
+[volume]
+command=$script_dir/volume-pulseaudio/volume-pulseaudio
+instance=Master
+interval=once
+signal=1
+
+[key_layout]
+label= 
+interval=1
+command=setxkbmap -query | grep layout | awk '{print $2}' | tr a-z A-Z
+
+[time]
+label= 
+command=date '+%Y-%m-%d %H:%M'
+interval=5

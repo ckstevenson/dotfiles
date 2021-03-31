@@ -1,0 +1,346 @@
+[colors]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+black = ${xrdb:color0}
+darkred = ${xrdb:color1}
+darkgreen = ${xrdb:color2}
+darkyellow = ${xrdb:color3}
+darkblue = ${xrdb:color4}
+darkmagenta = ${xrdb:color5}
+lightgrey = ${xrdb:color7}
+grey = ${xrdb:color8}
+red = ${xrdb:color9}
+green = ${xrdb:color10}
+yellow = ${xrdb:color11}
+blue = ${xrdb:color12}
+magenta = ${xrdb:color13}
+cyan = ${xrdb:color14}
+white = ${xrdb:color15}
+
+
+[bar/default]
+#monitor= DP-0.1
+width = 100%
+height = 2%
+fixed-center = false
+line-size = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 0
+module-margin-right = 3
+
+font-0 = sans:size=10;1
+font-1 = "Font Awesome 5 Free:style=Regular:size=9;0"
+font-2 = "Font Awesome 5 Free:style=Solid:size=9;0"
+font-3 = "Font Awesome 5 Brands:size=9;0"
+
+modules-left = bspwm xwindow
+modules-right = backlight pulseaudio xkeyboard filesystem memory cpu cpu_temp wlan eth battery date power-menu
+
+wm-restack = bspwm
+
+;override-redirect = true
+
+#scroll-up = bspwm-desknext
+#scroll-down = bspwm-deskprev
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
+
+cursor-click = pointer
+#cursor-scroll = ns-resize
+
+[module/power-menu]
+type = custom/menu
+
+label-open = 
+label-close = 
+
+; Optional item separator
+; Default: none
+label-separator = |
+; If true, <label-toggle> will be to the left of the menu items (default).
+; If false, it will be on the right of all the items.
+expand-right = true
+
+; "menu-LEVEL-N" has the same properties as "label-NAME" with
+; the additional "exec" property
+;
+; Available exec commands:
+;   menu-open-LEVEL
+;   menu-close
+; Other commands will be executed using "/bin/sh -c $COMMAND"
+
+menu-0-0 = Reboot
+menu-0-0-exec = reboot
+menu-0-1 = Off
+menu-0-1-exec = poweroff
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:100:...%
+format-foreground = ${colors.blue}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %{A1:/bin/bash key_lay:} %icon%%{A}
+
+layout-icon-0 = de;DE
+layout-icon-1 = us;US
+
+[module/filesystem]
+type = internal/fs
+interval = 100
+
+mount-0 = /
+
+label-mounted = %{A1:/usr/bin/termite -e diskonaut:} %free%%{A}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.grey}
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-monitor> 
+
+label-monitor-foreground = ${colors.magenta}
+
+label-focused = %icon%
+label-focused-foreground = ${colors.lightgrey}
+label-focused-underline= ${colors.blue}
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-padding = 2
+
+label-urgent = %icon%!
+label-urgent-background = ${colors.darkred}
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = ${colors.grey}
+label-empty-padding = 2
+
+ws-icon-0 = "1;1"
+ws-icon-1 = "2;2"
+ws-icon-2 = "3;3"
+ws-icon-3 = "4;"
+ws-icon-4 = "5;"
+ws-icon-5 = "6;"
+ws-icon-6 = "7;"
+ws-icon-7 = "8;"
+ws-icon-8 = "9;"
+ws-icon-9 = "0;"
+
+; Separator in between workspaces
+; label-separator = |
+#TODO add warn
+[module/cpu]
+type = internal/cpu
+interval = 5
+format = <label> 
+label = %{A1:/usr/bin/termite -e glances:} %percentage%%%{A}
+
+[module/memory]
+type = internal/memory
+format = <label>
+interval = 5
+label = %{A1:/usr/bin/termite -e glances:} %gb_used%/%gb_total%%{A}
+
+[module/wlan]
+type = internal/network
+interface = ${env:WLAN}
+interval = 5
+
+format-connected = <label-connected>
+label-connected =  %essid%
+#format-disconnected = <label-disconnected>
+#label-disconnected = %ifname% disconnected
+#label-disconnected-foreground = ${colors.grey}
+
+[module/eth]
+type = internal/network
+interface = ${env:ETH}
+interval = 5
+
+format-connected-prefix-foreground = ${colors.grey}
+label-connected =  %local_ip%
+
+#format-disconnected = <label-disconnected>
+#label-disconnected = %ifname% disconnected
+#label-disconnected-foreground = ${colors.grey}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume> <bar-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+label-muted = 
+label-muted-foreground = ${colors.grey}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.magenta}
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.grey}
+
+[module/cpu_temp]
+type = internal/temperature
+interval = 5
+#thermal-zone = ${env:CPU}
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %{A1:/usr/bin/termite -e glances:}%temperature-c%%{A}
+label-warn = %{A1:/usr/bin/termite -e glances:}%temperature-c%%{A}
+label-warn-foreground = ${colors.darkred}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+[module/gpu_temp]
+type = internal/temperature
+interval = 5
+thermal-zone = 0
+hwmon-path = ${env:GPU}
+warn-temperature = 75
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+ 
+ 
+label = %{A1:/usr/bin/termite -e glances:}GPU %temperature-c%%{A}
+label-warn = %{A1:/usr/bin/termite -e glances:}GPU %temperature-c%%{A}
+label-warn-foreground = ${colors.darkred}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+
+enable-scroll = true
+
+format = <ramp> <label>
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+; Only applies if <bar> is used
+bar-width = 10
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+#adapter = ADP1
+adapter = AC
+
+poll-interval = 5
+label = %percentage%%
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+[settings]
+screenchange-reload = true
+throttle-output = 5
+throttle-output-for = 10
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+;margin-top = 5
+;margin-bottom = 5
+
+; vim:ft=dosini
