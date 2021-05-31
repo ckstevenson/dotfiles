@@ -1,6 +1,5 @@
 # Environmental Variables
 export BROWSER="/usr/bin/librewolf"
-#export TERMINAL="/usr/bin/termite"
 export TERMINAL="/usr/local/bin/st"
 #export TERM="xterm-256color"
 export VISUAL="/usr/bin/vim"
@@ -18,5 +17,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#c5c8c6,bg:#1d1f21,hl:#46d
 export WLAN=$(ls /sys/class/net | grep wl)
 export ETH=$(ls /sys/class/net | grep en)
 export BR=$(ls /sys/class/net | grep br)
+export WINEPREFIX="$HOME/.config/.wine"
 #[ "$(hostname)" == "workstation" ] && { export CPU=2; export GPU=/sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/hwmon/hwmon5/temp1_input ;} || { export CPU=6; export GPU=NONE ;}
 #export NUM_GPUS="$(lspci | grep VGA | wc -l)"

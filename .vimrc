@@ -1,11 +1,9 @@
 set t_Co=256
 set bg=dark
-set paste
+"set paste
 syntax on
-"set nu
 set rnu
 set tabstop=4
-"set cursorline
 set incsearch
 set showmatch
 set history=100
@@ -114,8 +112,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'vim-airline/vim-airline'
-"Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'pearofducks/ansible-vim'
 Plug 'https://github.com/ap/vim-css-color.git'
 Plug 'unblevable/quick-scope'
