@@ -13,6 +13,7 @@ alias gitb="git branch"
 alias gitc="git commit"
 alias gitco="git checkout"
 alias gitp="git push"
+alias gitls="git ls-tree --full-tree -r --name-only HEAD"
 alias gituser="git config user.name Cameron\ Stevenson && git config user.email cksteve@protonmail.com"
 alias gvid='cd ~/Videos/'
 alias gwork='cd ~/Documents/Work/'
