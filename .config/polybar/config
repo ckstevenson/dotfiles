@@ -35,9 +35,10 @@ module-margin-left = 0
 module-margin-right = 3
 
 font-0 = sans:size=10;1
-font-1 = "Font Awesome 5 Free:style=Regular:size=9;0"
-font-2 = "Font Awesome 5 Free:style=Solid:size=9;0"
-font-3 = "Font Awesome 5 Brands:size=9;0"
+font-1 = "DejaVuSansMono Nerd Font:style=Book:size=11;1"
+#font-1 = "Font Awesome 5 Free:style=Regular:size=9;0"
+#font-2 = "Font Awesome 5 Free:style=Solid:size=9;0"
+#font-3 = "Font Awesome 5 Brands:size=9;0"
 
 modules-left = bspwm xwindow
 modules-right = backlight pulseaudio xkeyboard filesystem memory cpu cpu_temp wlan eth battery date power-menu
@@ -57,8 +58,8 @@ cursor-click = pointer
 [module/power-menu]
 type = custom/menu
 
-label-open = 
-label-close = 
+label-open = 
+label-close = 
 
 ; Optional item separator
 ; Default: none
@@ -89,7 +90,7 @@ format-foreground = ${colors.blue}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %{A1:/bin/bash key_lay:} %icon%%{A}
+label-layout = %{A1:/bin/bash key_lay:}  %icon%%{A}
 
 layout-icon-0 = de;DE
 layout-icon-1 = us;US
@@ -100,7 +101,7 @@ interval = 100
 
 mount-0 = /
 
-label-mounted = %{A1:/usr/bin/termite -e diskonaut:} %free%%{A}
+label-mounted = %{A1:/usr/bin/termite -e diskonaut:} %free%%{A}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.grey}
 
@@ -129,14 +130,14 @@ label-empty-padding = 2
 
 ws-icon-0 = "1;1"
 ws-icon-1 = "2;2"
-ws-icon-2 = "3;3"
-ws-icon-3 = "4;"
-ws-icon-4 = "5;"
-ws-icon-5 = "6;"
-ws-icon-6 = "7;"
-ws-icon-7 = "8;"
-ws-icon-8 = "9;"
-ws-icon-9 = "0;"
+ws-icon-2 = "3;辶"
+ws-icon-3 = "4;"
+ws-icon-4 = "5;"
+ws-icon-5 = "6;"
+ws-icon-6 = "7;"
+ws-icon-7 = "8;"
+ws-icon-8 = "9;"
+ws-icon-9 = "0;"
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -145,13 +146,13 @@ ws-icon-9 = "0;"
 type = internal/cpu
 interval = 5
 format = <label> 
-label = %{A1:/usr/bin/termite -e glances:} %percentage%%%{A}
+label = %{A1:/usr/bin/termite -e glances:}﬙ %percentage%%%{A}
 
 [module/memory]
 type = internal/memory
 format = <label>
 interval = 5
-label = %{A1:/usr/bin/termite -e glances:} %gb_used%/%gb_total%%{A}
+label = %{A1:/usr/bin/termite -e glances:} %gb_used%/%gb_total%%{A}
 
 [module/wlan]
 type = internal/network
@@ -159,9 +160,9 @@ interface = ${env:WLAN}
 interval = 5
 
 format-connected = <label-connected>
-label-connected =  %essid%
-#format-disconnected = <label-disconnected>
-#label-disconnected = %ifname% disconnected
+label-connected = 直%essid%
+format-disconnected = <label-disconnected>
+#label-disconnected = 睊
 #label-disconnected-foreground = ${colors.grey}
 
 [module/eth]
@@ -170,7 +171,7 @@ interface = ${env:ETH}
 interval = 5
 
 format-connected-prefix-foreground = ${colors.grey}
-label-connected =  %local_ip%
+label-connected =   %local_ip%
 
 #format-disconnected = <label-disconnected>
 #label-disconnected = %ifname% disconnected
@@ -186,23 +187,24 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-label = %date% %time%
+label =  %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <ramp-volume> <label-volume> <bar-volume>
+format-volume = <ramp-volume> <label-volume> 
+#<bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 
-label-muted = 
+label-muted = ﱝ
 label-muted-foreground = ${colors.grey}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.magenta}
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -226,11 +228,11 @@ label = %{A1:/usr/bin/termite -e glances:}%temperature-c%%{A}
 label-warn = %{A1:/usr/bin/termite -e glances:}%temperature-c%%{A}
 label-warn-foreground = ${colors.darkred}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-0 = 﨎
+ramp-1 = 﨎
+ramp-2 = 﨎
+ramp-3 = 﨎
+ramp-4 = 﨏
 
 [module/gpu_temp]
 type = internal/temperature
@@ -262,18 +264,17 @@ card = intel_backlight
 
 enable-scroll = true
 
-format = <ramp> <label>
+format = <ramp>  <label>
 
 ; Available tokens:
 ;   %percentage% (default)
 label = %percentage%%
 
 ; Only applies if <ramp> is used
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
 
 ; Only applies if <bar> is used
 bar-width = 10
@@ -296,37 +297,49 @@ adapter = AC
 poll-interval = 5
 label = %percentage%%
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging>  <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
 
 ; Only applies if <ramp-capacity> is used
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 =  
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 
 ; Only applies if <bar-capacity> is used
 bar-capacity-width = 10
 
 ; Only applies if <animation-charging> is used
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
 ; Framerate in milliseconds
 animation-charging-framerate = 750
 
 ; Only applies if <animation-discharging> is used
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
+animation-discharging-0 =  
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-5 = 
+animation-discharging-6 = 
+animation-discharging-7 = 
+animation-discharging-8 = 
+animation-discharging-9 = 
 ; Framerate in milliseconds
 animation-discharging-framerate = 500
 
