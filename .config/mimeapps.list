@@ -1,7 +1,7 @@
 [Default Applications]
 application/vnd.mozilla.xul+xml=firefox.desktop;
 application/xhtml+xml=librewolf.desktop
-text/html=firefox.desktop;
+text/html=firefox.desktop
 text/mml=firefox.desktop;
 text/xml=firefox.desktop;
 text/x-shellscript=vim.desktop
@@ -12,8 +12,8 @@ image/png=sxiv.desktop;
 image/jpeg=sxiv.desktop;
 text/html=librewolf.desktop
 text/xml=vim.desktop;
-x-scheme-handler/http=librewolf.desktop
-x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
 x-scheme-handler/ftp=firefox.desktop;
 application/json=editor.desktop
 application/pdf=org.pwmt.zathura.desktop;
@@ -34,6 +34,9 @@ application/x-extension-html=librewolf.desktop
 application/x-extension-shtml=librewolf.desktop
 application/x-extension-xhtml=librewolf.desktop
 application/x-extension-xht=librewolf.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;

@@ -1,6 +1,5 @@
 set t_Co=256
 set bg=dark
-"set paste
 syntax on
 set rnu
 set tabstop=4
@@ -8,7 +7,7 @@ set incsearch
 set showmatch
 set history=100
 set wildmenu
-set wrap "Wrap lines
+set wrap
 "set mouse=nicr
 
 " Better navigation for wrapped lines
@@ -64,14 +63,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,6 +106,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'https://github.com/ap/vim-css-color.git'
 Plug 'unblevable/quick-scope'
+Plug 'hashivim/vim-terraform'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 set laststatus=2
 set noshowmode
