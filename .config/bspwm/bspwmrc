@@ -8,18 +8,18 @@ done
 
 xrdb $HOME/.Xresources &
 xmodmap $HOME/.Xmodmap &
-polybar default &
-unclutter &
+#polybar default &
+#unclutter &
 sxhkd &
-unclutter &
-numlockx &
+#unclutter &
+#numlockx &
 pgrep bspswallow || bspswallow &
-slack &
-ferdi &
+#slack &
+#ferdi &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
-[ $LAYOUT == "dgpu" ] && xrandr --output DP-0.1 --primary --output eDP-1-1 --off; nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+#[ $LAYOUT == "dgpu" ] && xrandr --output DP-0.1 --primary --output eDP-1-1 --off; nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
 setbg
 

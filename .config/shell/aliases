@@ -1,10 +1,10 @@
-alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/Git/dotfiles --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME'
 alias gans='cd ~/Documents/Work/Git/ansible'
 alias gconf='cd ~/.config'
 alias gd='cd ~/Documents'
 alias gdev='cd ~/Documents/Development/'
 alias gdl='cd ~/Downloads'
-alias gdot='cd ~/Documents/Git/dotfiles'
+alias gdot='cd ~/Documents/Dev/dotfiles'
 alias ge='cd /etc'
 alias ggit='cd ~/Documents/Git/'
 alias g~='cd ~'
@@ -47,3 +47,4 @@ alias umount_work='fusermount -u /home/cameron/Documents/Work/GDrive'
 alias umount_personal='fusermount -u /home/cameron/Documents/GDrive'
 alias weather='curl -s wttr.in/Flensburg'
 alias xev="xev -event keyboard"
+alias vim="nvim"
