@@ -1,6 +1,6 @@
 # Environmental Variables
 export BROWSER="/usr/bin/firefox"
-export TERMINAL="/usr/local/bin/st"
+export TERMINAL="/usr/bin/alacritty"
 #export TERM="xterm-256color"
 export VISUAL="/usr/bin/vim"
 export EDITOR="$VISUAL"
