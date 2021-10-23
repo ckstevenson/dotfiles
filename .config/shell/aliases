@@ -7,7 +7,6 @@ alias gdl='cd ~/Downloads'
 alias gdot='cd ~/Documents/Git/dotfiles'
 alias ge='cd /etc'
 alias ggit='cd ~/Documents/Git/'
-alias g~='cd ~'
 alias gitb="git branch"
 alias gitc="git commit"
 alias gitco="git checkout"
@@ -35,7 +34,7 @@ alias pac="sudo pacman"
 alias pac_cc='sudo pacman -Sc'
 alias pac_keyring='sudo pacman -Sy archlinux-keyring'
 alias pac_mirr='curl -s "https://archlinux.org/mirrorlist/?country=DE&country=DK&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 -'
-alias pac_orph='sudo pacman -Qtdq | sudo pacman -Rns -'
+alias pac_orph='pacman -Qqtd'
 alias pip_update="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
 alias r='ranger'
 alias redshift='redshift -l 54.780240:9.432900'
@@ -47,3 +46,5 @@ alias umount_work='fusermount -u /home/cameron/Documents/Work/GDrive'
 alias umount_personal='fusermount -u /home/cameron/Documents/GDrive'
 alias weather='curl -s wttr.in/Flensburg'
 alias xev="xev -event keyboard"
+alias zombied="ps -A -ostat,pid,ppid | grep -e '[zZ]'"
+alias vim='nvim'

@@ -100,14 +100,14 @@ map <C-g> :GFiles<CR>
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'pearofducks/ansible-vim'
-Plug 'https://github.com/ap/vim-css-color.git'
-Plug 'unblevable/quick-scope'
-Plug 'hashivim/vim-terraform'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'itchyny/lightline.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"Plug 'pearofducks/ansible-vim'
+"Plug 'https://github.com/ap/vim-css-color.git'
+"Plug 'unblevable/quick-scope'
+"Plug 'hashivim/vim-terraform'
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 set laststatus=2
 set noshowmode
