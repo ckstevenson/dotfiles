@@ -1,0 +1,21 @@
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set exrc
+set guicursor=
+set relativenumber
+set nohlsearch
+set nu
+set hidden
+set noerrorbells
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set scrolloff=8
+set completeopt=menu,menuone
+set cmdheight=2
+set updatetime=50
+set shortmess+=c
+"set signcolumn=auto
