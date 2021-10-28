@@ -21,4 +21,6 @@ Plug 'hrsh7th/nvim-cmp'
 " For vsnip user.
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+" formatting
+" Plug 'sbdchd/neoformat'
 call plug#end()
