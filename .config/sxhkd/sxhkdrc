@@ -43,14 +43,14 @@ XF86PowerOff
     prompt "Shutdown computer?" "sudo -A shutdown -h now"
 XF86Display
     disp_layout.sh
-XF86WLAN
-    $TERMINAL -e "Not Set"
+#XF86WLAN
+#    prompt "Not set"
 XF86AudioMicMute
     toggle_mic
 XF86Tools
     lxappearance
 XF86Favorites
-    $TERMINAL -e "Not Set"
+    prompt "Not set"
 
 # focus the last node/desktop
 super + Tab
