@@ -12,3 +12,5 @@ export WM="bspwm"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export WINEPREFIX="$HOME/.config/.wine"
 export MINIKUBE_IN_STYLE=False
+HOSTNAME="$(hostname)"
+export HOSTNAME
