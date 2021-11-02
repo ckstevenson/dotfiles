@@ -22,6 +22,9 @@ lua <<EOF
       ['<C-e>'] = cmp.mapping.close(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
+    experimental = {
+      ghost_text = true,
+    },
     sources = {
       { name = 'nvim_lsp' },
 
@@ -34,7 +37,8 @@ lua <<EOF
       -- For ultisnips user.
       -- { name = 'ultisnips' },
 
-      { name = 'buffer' },
+      { name = 'path' },
+      { name = 'buffer', keyword_length = 3 },
     }
   })
 
@@ -43,6 +47,9 @@ lua <<EOF
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   }
   require('lspconfig').bashls.setup {
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  }
+  require('lspconfig').terraformls.setup {
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   }
 EOF

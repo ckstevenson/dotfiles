@@ -1,5 +1,6 @@
 let mapleader = " "
 
+noremap <leader>so :so %<CR>
 " Better navigation for wrapped lines
 noremap <silent> k gk
 noremap <silent> j gj
@@ -21,12 +22,10 @@ command W w !sudo tee % > /dev/null
 
 " Close the current buffer
 map <leader>bd :bd<cr>
+map <leader>bn :bnext<cr>
+map <leader>bp :bprevious<cr>
 " Close all the buffers
-"map <leader>ba :bufdo bd<cr>
-"map <leader>l :bnext<cr>
-"map <leader>h :bprevious<cr>
-"map <C-l> :bnext<cr>
-"map <C-h> :bprevious<cr>
+map <leader>ba :bufdo bd<cr>
 
 " Useful mappings for managing tabs
 "map <leader>tn :tabnew<cr>
