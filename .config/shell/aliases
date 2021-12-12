@@ -1,0 +1,50 @@
+alias dotfiles='/usr/bin/git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME'
+alias gans='cd ~/Documents/Work/Git/ansible'
+alias gconf='cd ~/.config'
+alias gd='cd ~/Documents'
+alias gdev='cd ~/Documents/Development/'
+alias gdl='cd ~/Downloads'
+alias gdot='cd ~/Documents/Dev/dotfiles'
+alias ge='cd /etc'
+alias ggit='cd ~/Documents/Git/'
+alias g~='cd ~'
+alias gitb="git branch"
+alias gitc="git commit"
+alias gitco="git checkout"
+alias gitp="git push"
+alias gitls="git ls-tree --full-tree -r --name-only HEAD"
+alias gituser="git config user.name Cameron\ Stevenson && git config user.email cksteve@protonmail.com"
+alias gvid='cd ~/Videos/'
+alias gwork='cd ~/Documents/Work/'
+alias gnc='cd ~/Documents/Nextcloud/'
+alias gother='cd ~/Other/'
+alias gpass='cd ~/.password-store/'
+alias gph='cd ~/Photos/'
+alias grep='grep --color=auto'
+alias gscript='cd ~/.local/bin/'
+alias la='ls -a --color=auto'
+alias ll='ls -l --color=auto'
+alias lla='ls -la --color=auto'
+alias ls='ls --color=auto'
+alias lsblk='lsblk -o name,rm,size,ro,type,mountpoint,model'
+alias mk='minikube'
+alias mount_work='google-drive-ocamlfuse -label work /home/cameron/Documents/Work/GDrive/ -docsmode libreoffice'
+alias mount_personal='google-drive-ocamlfuse -label personal /home/cameron/Documents/GDrive/ -docsmode libreoffice'
+alias open='xdg-open'
+alias pac="sudo pacman"
+alias pac_cc='sudo pacman -Sc'
+alias pac_keyring='sudo pacman -Sy archlinux-keyring'
+alias pac_mirr='curl -s "https://archlinux.org/mirrorlist/?country=DE&country=DK&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 -'
+alias pac_orph='sudo pacman -Qtdq | sudo pacman -Rns -'
+alias pip_update="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
+alias r='ranger'
+alias redshift='redshift -l 54.780240:9.432900'
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias trizen='trizen --noedit'
+alias tsm="transmission-remote"
+alias tsmd="transmission-daemon"
+alias umount_work='fusermount -u /home/cameron/Documents/Work/GDrive'
+alias umount_personal='fusermount -u /home/cameron/Documents/GDrive'
+alias weather='curl -s wttr.in/Flensburg'
+alias xev="xev -event keyboard"
+alias vim="nvim"
