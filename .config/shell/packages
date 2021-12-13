@@ -1,0 +1,7 @@
+alias p="paru"
+alias pm="sudo pacman"
+alias pmcc='sudo pacman -Sc'
+alias pmkeyring='sudo pacman -Sy archlinux-keyring'
+alias pmmir='curl -s "https://archlinux.org/mirrorlist/?country=DE&country=DK&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 -'
+alias pmorph='pacman -Qqtd'
+alias pipud="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"

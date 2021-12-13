@@ -1,0 +1,6 @@
+alias vl='virsh list --all'
+alias vs='virsh start'
+alias vd='virsh destroy'
+alias vs='virsh shutdown'
+alias vss='virsh snapshot-create-as'
+alias vdhcp='virsh net-dhcp-leases --network default'

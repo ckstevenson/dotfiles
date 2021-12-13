@@ -1,0 +1,4 @@
+alias tf="terraform"
+alias tfa="terraform apply"
+alias tfd="terraform destroy"
+alias tfi="terraform init"
