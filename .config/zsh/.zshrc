@@ -72,3 +72,5 @@ bindkey -s "^l" "clear\n"
 
 for f in ~/.config/shell/*; do source "$f"; done
 
+source <(awless completion zsh)
+source <(complete -C '/usr/bin/aws_completer' aws)

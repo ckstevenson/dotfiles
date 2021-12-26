@@ -16,5 +16,5 @@ export ETH=$(ls /sys/class/net | grep en)
 export BR=$(ls /sys/class/net | grep br)
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export AWS_VAULT_BACKEND=pass
-HOSTNAME="$(hostname)"
+HOSTNAME="$(hostnamectl hostname)"
 export HOSTNAME
