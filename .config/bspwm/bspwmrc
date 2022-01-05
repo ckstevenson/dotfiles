@@ -6,9 +6,6 @@ do
     killall $i
 done
 
-[ "$(lspci | grep VGA -c)" -eq 2 ] && xrandr --output DisplayPort-5 --primary --mode 2560x1440 --output eDP-1-1 --off 
-bspc monitor -d 1 2 3 
-
 xrdb "$HOME"/.Xresources &
 xmodmap "$HOME"/.Xmodmap &
 polybar default &
@@ -16,6 +13,10 @@ unclutter &
 numlockx &
 pgrep bspswallow || bspswallow &
 sxhkd &
+
+bspc monitor -d 1 2 3
+
+[ "$(lspci | grep Fresco)" ] && xrandr --output DP3 --primary --mode 2560x1440 --output eDP1 --off
 setbg
 
 # Unused monitors
