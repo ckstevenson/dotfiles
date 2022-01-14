@@ -6,18 +6,17 @@ do
     killall $i
 done
 
+[ "$(lspci | grep Fresco)" ] && xrandr --output DP3 --primary --mode 2560x1440 --output eDP1 --off
+bspc monitor -d 1 2 3
+
+polybar default &
+setbg &
 xrdb "$HOME"/.Xresources &
 xmodmap "$HOME"/.Xmodmap &
-polybar default &
 unclutter &
 numlockx &
 pgrep bspswallow || bspswallow &
 sxhkd &
-
-bspc monitor -d 1 2 3
-
-[ "$(lspci | grep Fresco)" ] && xrandr --output DP3 --primary --mode 2560x1440 --output eDP1 --off
-setbg
 
 # Unused monitors
 bspc config remove_disabled_monitors true
