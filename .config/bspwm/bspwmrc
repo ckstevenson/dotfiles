@@ -33,7 +33,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Tiling
-bspc config automatic_scheme spiral
+#bspc config automatic_scheme spiral
+#bspc config automatic_scheme alternate
+bspc config automatic_scheme longest_side
 bspc config initial_polarity second_child
 
 # Pointer configurations
