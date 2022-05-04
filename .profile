@@ -14,7 +14,9 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export WLAN=$(ls /sys/class/net | grep wl)
 export ETH=$(ls /sys/class/net | grep en)
 export BR=$(ls /sys/class/net | grep br)
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export VAGRANT_DEFAULT_PROVIDER=libvirt
 export AWS_VAULT_BACKEND=pass
 HOSTNAME="$(hostnamectl hostname)"
 export HOSTNAME
+export ANSIBLE_FORCE_COLOR=1
+export GOPATH="/home/cameron/.local/go/"
