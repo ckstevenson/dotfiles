@@ -19,10 +19,13 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'petertriho/cmp-git'
 " For vsnip user.
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 " formatting
 " Plug 'sbdchd/neoformat'
+Plug 'NoahTheDuke/vim-just'
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
