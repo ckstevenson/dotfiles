@@ -17,14 +17,18 @@ super + d
     dmenu_run -g 10 -l 10
 super + f
     $TERMINAL -e $FILE
+super + m
+    slack && discord
 super + p
     passmenu
 super + s
     dmenu_xfreerdp
 super + v
-    virt-viewer
+    virt-manager
 super + w
     $BROWSER
+super + z
+    /usr/bin/pritunl-client-electron
 super + shift + x
   betterlockscreen -l
 
