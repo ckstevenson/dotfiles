@@ -1,6 +1,11 @@
 # vi mode
-bindkey -v
-export KEYTIMEOUT=1
+#bindkey -v
+bindkey -e
+# bring back my bash habits
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+#export KEYTIMEOUT=1
 
 HISTFILE=~/.cache/zsh/history
 HISTSIZE=1000
@@ -68,7 +73,7 @@ done
 
 # Control bindings for programs
 bindkey -s "^b" "bc -l\n"
-bindkey -s "^l" "clear\n"
+#bindkey -s "^l" "clear\n"
 
 for f in ~/.config/shell/*; do source "$f"; done
 
