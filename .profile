@@ -20,3 +20,4 @@ HOSTNAME="$(hostnamectl hostname)"
 export HOSTNAME
 export ANSIBLE_FORCE_COLOR=1
 export GOPATH="/home/cameron/.local/go/"
+export LIBVIRT_DEFAULT_URI="qemu:///system"
