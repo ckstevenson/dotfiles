@@ -1,3 +1,4 @@
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dev/dotfiles --work-tree=$HOME'
 alias g="git"
 alias gd="git diff"
 alias gb="git branch"

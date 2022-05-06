@@ -1,4 +1,3 @@
-alias dotfiles='/usr/bin/git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME'
 alias gans='cd ~/Documents/Work/Git/ansible'
 alias gconf='cd ~/.config'
 alias gdoc='cd ~/Documents'
