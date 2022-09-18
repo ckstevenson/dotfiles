@@ -73,6 +73,10 @@ done
 
 # Control bindings for programs
 bindkey -s "^b" "bc -l\n"
+bindkey -s "^f" "$FILE\n"
+#bindkey -s "^m" "$MAIL\n"
+bindkey -s "^n" "khal calendar\n"
+bindkey -s "^q" "pritunl-client list\n"
 #bindkey -s "^l" "clear\n"
 
 for f in ~/.config/shell/*; do source "$f"; done

@@ -18,7 +18,9 @@ super + d
 super + f
     $TERMINAL -e $FILE
 super + m
-    slack && discord
+    $TERMINAL -e $MAIL
+super + n
+    $TERMINAL -e khal interactive
 super + p
     passmenu
 super + s
@@ -28,15 +30,15 @@ super + v
 super + w
     $BROWSER
 super + z
-    /usr/bin/pritunl-client-electron
+    pritunl-client start 9vz9zmhhd26zx8lckdf0nizqtn7aln8q && pritunl-client start smlktkcex4inhrgzg6d0h4yfbgpy7nh6
 super + shift + x
   betterlockscreen -l
 
 # Special
 XF86AudioRaiseVolume
-    pactl set-sink-volume $(pactl list short sinks | head -n1 | cut -f1) +5%
+    pactl set-sink-volume 3 +5%
 XF86AudioLowerVolume
-    pactl set-sink-volume $(pactl list short sinks | head -n1 | cut -f1) -5%
+    pactl set-sink-volume 3 -5%
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 XF86MonBrightnessUp 

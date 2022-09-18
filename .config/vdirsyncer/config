@@ -1,0 +1,39 @@
+[general]
+# A folder where vdirsyncer can store some metadata about each pair.
+status_path = "~/.vdirsyncer/status/"
+
+[pair my_contacts]
+a = "my_contacts_local"
+b = "my_contacts_remote"
+collections = ["from a", "from b"]
+metadata = ["displayname"]
+
+[storage my_contacts_local]
+type = "filesystem"
+path = "~/.config/contacts/"
+fileext = ".vcf"
+
+[storage my_contacts_remote]
+type = "carddav"
+
+# We can simplify this URL here as well. In theory it shouldn't matter.
+url = "https://nc.germerica.us/remote.php/carddav"
+username = "cameron"
+password.fetch =  ["command", "pass", "Hosting/nc/vdirsyncer"]
+
+[pair outlook]
+a = "outlook_local"
+b = "outlook_remote"
+collections = ["from a", "from b"]
+
+[storage outlook_remote]
+type = "caldav"
+url = "http://localhost:1080/users/c.stevenson@dcmn.com/calendar/"
+#url = "https://outlook.office.com/calendar"
+username = "c.stevenson@dcmn.com"
+password.fetch =  ["command", "pass", "Work/DCMN/onelogin"]
+
+[storage outlook_local]
+type = "filesystem"
+path = "~/.config/calendar/"
+fileext = ".ics"

@@ -1,5 +1,5 @@
 ! special
-!*.font:	mono:pixelsize=20:antialias=true:autohint=true;
+!*.font:	mono:pixelsize=25:antialias=true:autohint=true;
 !*.font: Font Awesome 5 Free:pixelsize=14:antialias=true:autohint=true;
 !*.font: Inconsolata:pixelsize=14:antialias=true:autohint=true;
 *.foreground:   #c5c8c6

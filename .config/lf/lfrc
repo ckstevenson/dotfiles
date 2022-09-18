@@ -1,5 +1,7 @@
 # Basic Settings
-set previewer ~/.local/bin/lf_preview
+#set previewer ~/.local/bin/lf_preview
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
 set preview true
 set icons true
 set drawbox true
@@ -138,13 +140,3 @@ map C clear
 map U unselect
 
 # Movement
-map gdl='cd ~/Downloads'
-map gd='cd ~/Documents'
-map gh='cd ~'
-map gans='cd ~/Documents/Navis/Git/ansible'
-map gdev='cd ~/Documents/Git'
-map gdot='cd ~/Documents/Git/dotfiles'
-map gconf='cd ~/.config'
-map gscript='cd ~/.local/bin/'
-map gc cd ~/.config
-map gE cd /etc
