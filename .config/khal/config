@@ -1,0 +1,19 @@
+[calendars]
+
+[[my_contacts_local]]
+path = ~/.config/contacts/*
+type = discover
+
+[[outlook_local]]
+path = ~/.config/calendar/*
+type = discover
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
+
+[default]
+default_calendar = calendar
