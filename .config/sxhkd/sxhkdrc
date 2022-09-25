@@ -22,7 +22,7 @@ super + m
 super + n
     $TERMINAL -e khal interactive
 super + p
-    passmenu
+    passmenu -i
 super + s
     dmenu_xfreerdp
 super + v
