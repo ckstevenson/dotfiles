@@ -30,8 +30,8 @@ collections = ["from a", "from b"]
 type = "caldav"
 url = "http://localhost:1080/users/c.stevenson@dcmn.com/calendar/"
 #url = "https://outlook.office.com/calendar"
-username = "c.stevenson@dcmn.com"
-password.fetch =  ["command", "pass", "Work/DCMN/onelogin"]
+username.fetch =  ["command", "pass", "Work/DCMN/user"]
+password.fetch =  ["command", "pass", "Work/DCMN/ol"]
 
 [storage outlook_local]
 type = "filesystem"
