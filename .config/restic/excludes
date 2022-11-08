@@ -1,0 +1,25 @@
+$HOME/Backups/
+$HOME/Books/
+$HOME/Pictures/
+$HOME/Videos/
+$HOME/VirtualBox VMs/
+$HOME/Downloads/
+
+# If there's any folder called .cache it's a cache
+$HOME/**/Cache
+$HOME/**/.cache
+$HOME/**/__pycache__
+
+# Firefox
+$HOME/.mozilla/firefox/*/storage
+$HOME/.mozilla/firefox/*/minidumps
+
+# Chromium
+$HOME/.config/chromium/Default/Local Storage
+$HOME/.config/chromium/Default/Session Storage
+SHOME/.config/chromium/Default/Application Cache
+
+# Electron apps seem to do this
+$HOME/.config/*/Cache
+$HOME/.config/*/GPUCache
+$HOME/.config/*/ShaderCache
