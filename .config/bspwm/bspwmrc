@@ -11,7 +11,7 @@ bspc monitor -d 1 2 3 4 5 0
 #[ "$(lspci | grep Fresco)" ] && xrandr --output eDP1 --mode 1920x1200 --pos 0x1581 --rotate normal --output DP1 --primary --mode 3840x2160 --pos 1920x0 --rotate normal --output DP2 --off --output DP3 --off --output DP4 --off --output HDMI1 --off --output VIRTUAL1 --off
 
 setxkbmap -option caps:escape
-dunst &
+#dunst &
 xrdb "$HOME"/.Xresources &
 #xmodmap "$HOME"/.Xmodmap &
 # setxkbmap -option caps:escape
