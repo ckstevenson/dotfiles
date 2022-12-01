@@ -18,4 +18,5 @@ set completeopt=menu,menuone
 set cmdheight=2
 set updatetime=50
 set shortmess+=c
+set clipboard+=unnamedplus
 "set signcolumn=auto
