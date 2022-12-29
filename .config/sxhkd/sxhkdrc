@@ -29,8 +29,7 @@ super + v
     virt-manager
 super + w
     $BROWSER
-super + z
-    pritunl-client start 9vz9zmhhd26zx8lckdf0nizqtn7aln8q && pritunl-client start smlktkcex4inhrgzg6d0h4yfbgpy7nh6
+#super + z
 super + shift + x
   betterlockscreen -l
 
