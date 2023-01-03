@@ -14,7 +14,7 @@ super + b
 super + c
     chromium
 super + d
-    dmenu_run -g 10 -l 10
+    dmenu_run -i -g 10 -l 10
 super + f
     $TERMINAL -e $FILE
 super + m
@@ -22,9 +22,11 @@ super + m
 super + n
     $TERMINAL -e khal interactive
 super + p
-    passmenu -i
+    dmenu_bw password
 super + s
     dmenu_xfreerdp
+super + t
+    dmenu_bw totp
 super + v
     virt-manager
 super + w
@@ -35,9 +37,9 @@ super + shift + x
 
 # Special
 XF86AudioRaiseVolume
-    pactl set-sink-volume 3 +5%
+    pactl set-sink-volume 0 +5%
 XF86AudioLowerVolume
-    pactl set-sink-volume 3 -5%
+    pactl set-sink-volume 0 -5%
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 XF86MonBrightnessUp 
