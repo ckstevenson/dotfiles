@@ -1,4 +1,5 @@
 # Environmental Variables
+export LESS='-R --use-color -Dd+r$Du+b'
 export BROWSER="firefox"
 export TERMINAL="st"
 export VISUAL="nvim"
@@ -23,6 +24,7 @@ export HOSTNAME
 export ANSIBLE_FORCE_COLOR=1
 export GOPATH="/home/cameron/.local/go/"
 export LIBVIRT_DEFAULT_URI="qemu:///system"
+export INNOVO_ANSIBLE_USER="cstevenson"
 
 export LF_ICONS="\
 di=:\

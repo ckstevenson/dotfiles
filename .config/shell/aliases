@@ -1,7 +1,1 @@
-alias aws-inf-dev="aws-vault exec inf-dev --"
-alias aws-inf-live="aws-vault exec inf-adm --"
-alias aws-dca-dev="aws-vault exec dev --"
-alias aws-dca-staging="aws-vault exec staging --"
-alias aws-dca-live="aws-vault exec live --"
-alias aws-root="aws-vault exec root --"
-alias aws-internal="aws-vault exec internal --"
+alias cp='cp --reflink=auto --sparse=always'

@@ -28,4 +28,6 @@ Plug 'hrsh7th/vim-vsnip'
 " Plug 'sbdchd/neoformat'
 Plug 'NoahTheDuke/vim-just'
 Plug 'ThePrimeagen/harpoon'
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
+colorscheme carbonfox

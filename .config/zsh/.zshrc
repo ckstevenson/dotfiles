@@ -1,6 +1,6 @@
 # vi mode
-#bindkey -v
-bindkey -e
+bindkey -v
+#bindkey -e
 # bring back my bash habits
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
@@ -8,8 +8,8 @@ bindkey "^[[1;5D" backward-word
 #export KEYTIMEOUT=1
 
 HISTFILE=~/.cache/zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 
 autoload -U colors && colors
 

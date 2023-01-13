@@ -23,10 +23,10 @@ super + n
     $TERMINAL -e khal interactive
 super + p
     dmenu_bw password
+super + P
+    dmenu_bw totp
 super + s
     dmenu_xfreerdp
-super + t
-    dmenu_bw totp
 super + v
     virt-manager
 super + w
