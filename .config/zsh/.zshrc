@@ -1,6 +1,6 @@
 # vi mode
-#bindkey -v
-bindkey -e
+bindkey -v
+#bindkey -e
 # bring back my bash habits
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
@@ -40,6 +40,9 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+
+# ability to delete chars in vi mode
+bindkey "^?" backward-delete-char
 
 # prompt
 autoload -Uz vcs_info
