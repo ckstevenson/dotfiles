@@ -1,6 +1,6 @@
 # vi mode
-bindkey -v
-#bindkey -e
+#bindkey -v
+bindkey -e
 # bring back my bash habits
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
