@@ -1,0 +1,8 @@
+alias avenv="source ~/.local/pipx/venvs/ansible/bin/activate && export ANSIBLE_STRATEGY_PLUGINS=\$(python3 -c 'import ansible_mitogen, os; print(os.path.join(os.path.dirname(ansible_mitogen.__file__), \"plugins\", \"strategy\"))')"
+vsphere() {
+        export VSPHERE_USER=$(bw_wrapper get username db39aa7c-38a5-4947-960e-2564e203edd0)
+        export VSPHERE_PASSWORD=$(bw_wrapper get password db39aa7c-38a5-4947-960e-2564e203edd0)
+        export NETBOX_API_TOKEN=$(bw_wrapper get password b1378f3e-e6a9-444a-b739-4be0f8df2e3c)
+        export TF_HTTP_PASSWORD=$(bw_wrapper get password f2f8ab59-b379-4890-aa90-3f866d34f91d)
+        export TF_HTTP_USERNAME=$VSPHERE_USER
+}
