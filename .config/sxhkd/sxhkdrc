@@ -22,16 +22,17 @@ super + m
 super + n
     $TERMINAL -e khal interactive
 super + p
-    dmenu_bw password
+    bw_wrapper -d get password
 super + P
-    dmenu_bw totp
+    bw_wrapper -d get totp
 super + s
     dmenu_xfreerdp
 super + v
     virt-manager
 super + w
     $BROWSER
-#super + z
+super + z
+    slack && teams
 super + shift + x
   betterlockscreen -l
 
