@@ -1,3 +1,43 @@
+# dots
+.Xauthority
+.ansible/
+.ansible_async/
+.ansible_vault_password/
+.bash_history
+.bash_logout
+.cache/
+.cargo/
+.cluster-api/
+.config/Bitwarden CLI/
+.password-store
 .vdirsyncer/
 .config/smb
 .config/shell/bw
+.set_vcenter_user.yml
+.terraformrc
+.gitconfig
+.gnupg/
+.java/
+.lesshst
+.pki/
+.ssh/
+.terraform.d/
+.vagrant.d/
+.wget-hsts
+.zoom/
+.mozilla/
+.config/Signal/
+.config/Slack/
+.config/chromium/
+.config/libreoffice/
+.config/zoom.conf
+
+# dirs
+Backups/
+Books/
+Documents/
+Downloads/
+Games/
+Pictures/
+Videos/
+dev/
