@@ -1,9 +1,10 @@
 # vi mode
 bindkey -v
-#bindkey -e
 # bring back my bash habits
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^A" vi-beginning-of-line
+bindkey "^E" vi-end-of-line
 
 #export KEYTIMEOUT=1
 
@@ -77,10 +78,9 @@ done
 # Control bindings for programs
 bindkey -s "^b" "bc -l\n"
 bindkey -s "^f" "$FILE\n"
-#bindkey -s "^m" "$MAIL\n"
+bindkey -s "^m" "$MAIL\n"
 bindkey -s "^n" "khal calendar\n"
 bindkey -s "^q" "pritunl-client list\n"
-#bindkey -s "^l" "clear\n"
 
 for f in ~/.config/shell/*; do source "$f"; done
 
