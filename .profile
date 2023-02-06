@@ -1,7 +1,7 @@
 # Environmental Variables
 export LESS='-R --use-color -Dd+r$Du+b'
 export BROWSER="firefox"
-export TERMINAL="st"
+export TERMINAL="alacritty"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export STATUSBAR="polybar default"
