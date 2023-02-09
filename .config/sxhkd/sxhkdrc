@@ -20,7 +20,7 @@ super + f
 super + m
     $TERMINAL -e $MAIL
 super + n
-    $TERMINAL -e khal interactive
+    $TERMINAL -e ikhal
 super + p
     bw_wrapper -d get password
 super + P
@@ -33,6 +33,8 @@ super + w
     $BROWSER
 super + z
     slack && teams
+super + shift + z
+    start_vpn
 super + shift + x
   betterlockscreen -l
 
