@@ -1,6 +1,6 @@
 [calendars]
 
-[[my_contacts_local]]
+[[contacts_local]]
 path = ~/.config/contacts/*
 type = discover
 

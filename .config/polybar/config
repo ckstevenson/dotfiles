@@ -80,7 +80,7 @@ menu-0-1-exec = poweroff
 type = internal/xwindow
 #label = %title:0:100:...%
 label = %title%
-label-maxlen = 80
+label-maxlen = 50
 format-foreground = ${colors.blue}
 
 [module/xkeyboard]
@@ -98,7 +98,7 @@ interval = 100
 
 mount-0 = /
 
-label-mounted = %{A1:/usr/local/bin/st -e diskonaut:} %free%%{A}
+label-mounted = %{A1:$TERM -e diskonaut:} %free%%{A}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.grey}
 
@@ -125,12 +125,16 @@ label-empty = %icon%
 label-empty-foreground = ${colors.grey}
 label-empty-padding = 2
 
-ws-icon-0 = "1;1"
-ws-icon-1 = "2;2"
-ws-icon-2 = "3;3"
-ws-icon-3 = "4;4"
-ws-icon-4 = "5;5"
-ws-icon-5 = "0;0"
+ws-icon-1 = "1;"
+ws-icon-2 = "2;"
+ws-icon-3 = "3;"
+ws-icon-4 = "4;4"
+ws-icon-5 = "5;5"
+ws-icon-6 = "6;6"
+ws-icon-7 = "7;"
+ws-icon-8 = "8;"
+ws-icon-9 = "9;"
+ws-icon-0 = "0;0"
 #ws-icon-3 = "4;"
 #ws-icon-4 = "5;"
 #ws-icon-5 = "6;"
@@ -146,13 +150,13 @@ ws-icon-5 = "0;0"
 type = internal/cpu
 interval = 5
 format = <label> 
-label = %{A1:/usr/local/bin/st -e glances:}﬙ %percentage%%%{A}
+label = %{A1:$TERM -e glances:}﬙ %percentage%%%{A}
 
 [module/memory]
 type = internal/memory
 format = <label>
 interval = 5
-label = %{A1:/usr/local/bin/st -e glances:} %gb_used%/%gb_total%%{A}
+label = %{A1:$TERM -e glances:} %gb_used%/%gb_total%%{A}
 
 [module/wlan]
 type = internal/network
@@ -218,7 +222,7 @@ bar-volume-empty-foreground = ${colors.grey}
 type = internal/temperature
 interval = 5
 #thermal-zone = ${env:CPU}
-thermal-zone = 8
+thermal-zone = 6
 warn-temperature = 60
 
 format = <ramp> <label>
@@ -245,8 +249,8 @@ format = <ramp> <label>
 format-warn = <ramp> <label-warn>
  
  
-label = %{A1:/usr/local/bin/st -e glances:}GPU %temperature-c%%{A}
-label-warn = %{A1:/usr/local/bin/st -e glances:}GPU %temperature-c%%{A}
+label = %{A1:$TERM -e glances:}GPU %temperature-c%%{A}
+label-warn = %{A1:$TERM -e glances:}GPU %temperature-c%%{A}
 label-warn-foreground = ${colors.darkred}
 
 ramp-0 = 﨎

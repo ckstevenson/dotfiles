@@ -21,6 +21,7 @@ alias redshift='redshift -l 54.780240:9.432900'
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 alias weather='curl -s wttr.in/Flensburg'
 alias xev="xev -event keyboard"
+alias xclip="xclip -selection clipboard"
 alias zombied="ps -A -ostat,pid,ppid | grep -e '[zZ]'"
 alias vim='nvim'
 alias ap='ansible-playbook'

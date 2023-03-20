@@ -57,3 +57,8 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+
+inoremap { {}<Left>
+
+inoremap ( ()<Left>
+

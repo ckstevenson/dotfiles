@@ -23,7 +23,7 @@ super + n
     $TERMINAL -e ikhal
 super + p
     bw_wrapper -d get password
-super + P
+super + shift + p
     bw_wrapper -d get totp
 super + s
     dmenu_xfreerdp
@@ -32,7 +32,7 @@ super + v
 super + w
     $BROWSER
 super + z
-    slack && teams
+    ferdium
 super + shift + z
     start_vpn
 super + shift + x

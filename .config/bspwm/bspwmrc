@@ -6,7 +6,8 @@ do
     killall $i
 done
 
-bspc monitor -d 1 2 3 4 5 0
+#autorandr --change
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 [ "$(xrandr | grep 'DP1-3')" ] && xrandr --output eDP1 --off --output DP1-3 --primary --mode 2560x1440
 
 # applications/commands on start
@@ -17,7 +18,7 @@ unclutter &
 numlockx &
 pgrep bspswallow || bspswallow &
 sxhkd &
-#davmail &
+davmail &
 setbg &
 polybar default &
 
@@ -51,7 +52,9 @@ bspc config pointer_follows_monitor true
 
 # Window rules
 bspc rule -a Lxappearance state=floating
+#bspc rule -a Nextcloud state=tiled
+#Add Nextcloud account
 bspc rule -a Zathura state=tiled
 #bspc rule -a Slack:slack -o node=@^1:^10:/2
-bspc rule -a Ferdi:ferdi #-o node=@^1:^10:/1
+bspc rule -a Ferdium:ferdium -o node=@^1:^10:/1
 
