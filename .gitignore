@@ -31,7 +31,9 @@
 .config/chromium/
 .config/libreoffice/
 .config/zoom.conf
-.config/Nextcloud
+.config/Nextcloud/
+.config/contacts/
+.config/calander/
 
 # dirs
 Backups/
@@ -42,3 +44,5 @@ Games/
 Pictures/
 Videos/
 dev/
+
+.config/shell/gec
