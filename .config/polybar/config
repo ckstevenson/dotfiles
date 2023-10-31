@@ -76,12 +76,12 @@ menu-0-0-exec = reboot
 menu-0-1 = Off
 menu-0-1-exec = poweroff
 
-[module/xwindow]
-type = internal/xwindow
-#label = %title:0:100:...%
-label = %title%
-label-maxlen = 50
-format-foreground = ${colors.blue}
+#[module/xwindow]
+#type = internal/xwindow
+##label = %title:0:100:...%
+#label = %title%
+#label-maxlen = 45
+#format-foreground = ${colors.blue}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -228,8 +228,8 @@ warn-temperature = 60
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 
-label = %{A1:/usr/bin/st -e glances:}%temperature-c%%{A}
-label-warn = %{A1:/usr/bin/st -e glances:}%temperature-c%%{A}
+label = %{A1:/usr/bin/alacritty -e glances:}%temperature-c%%{A}
+label-warn = %{A1:/usr/bin/alacritty -e glances:}%temperature-c%%{A}
 label-warn-foreground = ${colors.darkred}
 
 ramp-0 = 﨎
