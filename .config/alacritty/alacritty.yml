@@ -108,10 +108,10 @@ env:
   #   - None (default)
   #option_as_alt: None
 
-#scrolling:
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 50000
 
   # Scrolling distance multiplier.
   #multiplier: 3
@@ -770,7 +770,7 @@ key_bindings:
   - { key: K,       mods: Alt,           action: ScrollLineUp             }
   - { key: U,       mods: Alt,           action: ScrollHalfPageUp             }
   - { key: D,       mods: Alt,           action: ScrollHalfPageDown             }
-  - { key: Key0,    mods: Shift|Alt,                         action: ResetFontSize    }
+  - { key: Key0,    mods: Alt,                         action: ResetFontSize    }
   - { key: K,       mods: Shift|Alt,                         action: IncreaseFontSize }
   - { key: J,       mods: Shift|Alt,                         action: DecreaseFontSize }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
