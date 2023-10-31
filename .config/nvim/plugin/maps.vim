@@ -59,6 +59,12 @@ map <leader>sa zg
 map <leader>s? z=
 
 inoremap { {}<Left>
-
 inoremap ( ()<Left>
+inoremap [ []<Left>
 
+" Language server
+map <leader>lx :LspStop<cr>
+map <leader>ls :LspStart<cr>
+
+" Delete trailing spaces
+map <leader>dts :%s/\s\+$//e<cr>

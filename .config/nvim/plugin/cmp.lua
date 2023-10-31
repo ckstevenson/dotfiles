@@ -15,7 +15,7 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-CR>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
@@ -44,21 +44,21 @@ cmp.setup({
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 require('lspconfig').pyright.setup {
-  capabilities = capabilities
-  --capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+  capabilities = capabilities,
 }
 require('lspconfig').bashls.setup {
   capabilities = capabilities
-  --capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require('lspconfig').terraformls.setup {
   capabilities = capabilities
-  --capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require('lspconfig').gopls.setup {
   capabilities = capabilities
-  --capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require('lspconfig').dockerls.setup {
   capabilities = capabilities
+}
+require('lspconfig').ansiblels.setup {
+  capabilities = capabilities,
+  filetypes = { "yaml" }
 }

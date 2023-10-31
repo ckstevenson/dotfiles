@@ -14,7 +14,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set scrolloff=8
-set completeopt=menu,menuone
+"set completeopt=menu,menuone
 set cmdheight=2
 set updatetime=50
 set shortmess+=c
