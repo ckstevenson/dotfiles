@@ -40,11 +40,14 @@ super + shift + x
 
 # Special
 XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +5%
+    pactl set-sink-volume 0 +2%
+    #/home/cameron/.local/bin/volume_changer up
 XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%
+    pactl set-sink-volume 0 -2%
+    #/home/cameron/.local/bin/volume_changer down
 XF86AudioMute
     pactl set-sink-mute 0 toggle
+    #volume_changer mute
 XF86MonBrightnessUp 
     xbacklight -inc 5
 XF86MonBrightnessDown

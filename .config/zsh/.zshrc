@@ -84,4 +84,6 @@ bindkey -s "^n" "khal calendar\n"
 for f in ~/.config/shell/*; do source "$f"; done
 
 #source <(awless completion zsh)
-complete -C '/usr/bin/aws_completer' /usr/bin/aws
+#complete -C '/usr/bin/aws_completer' /usr/bin/aws
+#eval "$(_MOLECULE_COMPLETE=zsh_source molecule)"
+source /etc/profile.d/autojump.sh
