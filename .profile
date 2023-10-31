@@ -24,7 +24,6 @@ export HOSTNAME
 export ANSIBLE_FORCE_COLOR=1
 export GOPATH="/home/cameron/.local/go/"
 export LIBVIRT_DEFAULT_URI="qemu:///system"
-export INNOVO_ANSIBLE_USER="cstevenson"
 export WINIT_X11_SCALE_FACTOR=1.66
 export SUDO_ASKPASS="/usr/lib/ssh/gnome-ssh-askpass3"
 export SSH_ASKPASS="/usr/lib/ssh/gnome-ssh-askpass3"
