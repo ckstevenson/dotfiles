@@ -1,12 +1,13 @@
 return {
-    'hrsh7th/nvim-cmp', 
-    dependencies = { 
+    'hrsh7th/nvim-cmp',
+    dependencies = {
         'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/nvim-cmp',
+--        'petertriho/cmp-git',
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip'
     },
@@ -34,19 +35,18 @@ return {
           sources = cmp.config.sources({
               { name = 'nvim_lsp' },
               { name = 'luasnip' }, -- For luasnip users.
-          }, {
               { name = 'buffer' },
+              { name = 'path' },
           })
         })
 
         -- Set configuration for specific filetype.
-        cmp.setup.filetype('gitcommit', {
-          sources = cmp.config.sources({
-            { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
-          }, {
-            { name = 'buffer' },
-          })
-        })
+--         cmp.setup.filetype('gitcommit', {
+--           sources = cmp.config.sources({
+--             { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
+--             { name = 'buffer' },
+--           })
+--         })
 
         -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
         cmp.setup.cmdline({ '/', '?' }, {
@@ -60,8 +60,7 @@ return {
         cmp.setup.cmdline(':', {
           mapping = cmp.mapping.preset.cmdline(),
           sources = cmp.config.sources({
-            { name = 'path' }
-          }, {
+            { name = 'path' },
             { name = 'cmdline' }
           })
         })
@@ -87,5 +86,33 @@ return {
           capabilities = capabilities,
           filetypes = { "yaml" }
         }
+        require('lspconfig').nixd.setup {
+          capabilities = capabilities
+        }
+        require'lspconfig'.lua_ls.setup {
+          capabilities = capabilities,
+          on_init = function(client)
+            local path = client.workspace_folders[1].name
+            if not vim.loop.fs_stat(path..'/.luarc.json') and not vim.loop.fs_stat(path..'/.luarc.jsonc') then
+              client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
+                  Lua = {
+                      diagnostics = {
+                          -- Get the language server to recognize the `vim` global
+                          globals = {
+                            'vim',
+                            'require'
+                          },
+                      },
+                  }
+              })
+
+              client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+            end
+            return true
+          end
+        }
+--        require('lspconfig').marksman.setup {
+--          capabilities = capabilities,
+--        }
     end,
 }

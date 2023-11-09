@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 vim.opt.encoding = "utf-8"
--- vim.opt.guicursor=
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.hlsearch = false
@@ -8,7 +7,7 @@ vim.opt.belloff = "all"
 vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.scrolloff = 8
--- vim.opt.clipboard+=unnamedplus
+vim.opt.clipboard = "unnamedplus"
 vim.opt.ff = "unix"
 
 -- Indentation
@@ -19,6 +18,12 @@ vim.opt.expandtab = true -- <Tab> inserts spaces
 vim.opt.shiftwidth = 4 -- >>, << shift line by 4 spaces
 vim.opt.tabstop = 4 -- <Tab> appears as 4 spaces
 vim.opt.softtabstop = 4 -- <Tab> behaves as 4 spaces when editing
+
+-- Trim whitespaces at the of lines
+-- need to get working with ZZ
+vim.cmd([[
+  autocmd BufWritePre <buffer> :%s/\s\+$//e
+]])
 
 -- Keymaps
 require("mappings")

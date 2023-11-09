@@ -2,8 +2,14 @@ local mapper = function(mode, key, result, desc) vim.keymap.set(mode, key, resul
 
 -- Essentials
 mapper("i", "jj", "<Esc>")
-mapper("n", ":W", ":w")
 mapper("n", "<leader>dts", [[:%s/\s\+$//e<CR>]], "Delete trailing spaces")
+mapper("n", "<leader>w", ":w<CR>")
+mapper("n", "<leader>wq", ":wq<CR>")
+mapper("n", "<leader>p", [["*p]])
+
+-- Terminals
+mapper("n", "<leader><enter>", ":vsplit term://zsh<cr>", "Open a terminal" )
+mapper("n", "<leader>htopo", ":vsplit term://htop<cr>", "Open a terminal" )
 
 -- Movement
 -- move by line even with `wrap` set
@@ -21,7 +27,7 @@ mapper("n", "<C-l>", "<C-w>l", "Window right")
 -- Buffers
 mapper("n", "<Leader>bn", ":bn<CR>", "Next buffer")
 mapper("n", "<Leader>bp", ":bp<CR>", "Prev buffer")
-mapper("n", "<Leader>bd", ":bd", "Delete current buffer")
+mapper("n", "<Leader>bd", ":bp | bd #<CR>", "Delete current buffer")
 mapper("n", "<Leader>ba", ":bufdo bd", "Prev buffer")
 
 -- Splits
@@ -57,7 +63,6 @@ mapper("n", "+", "=", "Format")
 mapper("n", "<Leader>nn", ":set relativenumber!<CR>", "Toggle relative numbers")
 mapper("n", "<Leader>z", ":call ToggleFocus()<CR>", "Toggle focus")
 mapper("n", "<Leader>W", ":set wrap!<CR>", "Toggle wrap")
-mapper("i", "<M-r>", [[<Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>a]], "'set paste' automatically")
 mapper("n", "<Leader>tn", "<cmd>tabn<CR>", "Next tab");
 mapper("n", "<Leader>tp", "<cmd>tabp<CR>", "Prev tab");
 mapper("n", "<Leader>tq", "<cmd>tabcl<CR>", "Close tab");
