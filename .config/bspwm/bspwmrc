@@ -6,9 +6,19 @@ do
     killall $i
 done
 
-#autorandr --change
-bspc monitor -d 1 2 3 4 5 6 7 8 9 0
-[ "$(xrandr | grep 'DP1-3')" ] && xrandr --output eDP1 --off --output DP1-3 --primary --mode 2560x1440
+#[ "$(xrandr | grep 'DP1-3')" ] && arandr /home/cameron/.screenlayout/desk.sh #xrandr --output eDP1 --off --output DP1-3 --primary --mode 2560x1440
+#[ "$(xrandr | grep 'DP1-3')" ] && xrandr --output eDP1 --off --output DP1-3 --primary --mode 2560x1440
+
+if [ "$(xrandr | grep 'DP1-3')" ]; then
+  autorandr --load docked
+  bspc monitor DP1-1 -d 0
+  bspc monitor DP1-3 -d 1 2 3 4 5 6 7 8 9
+  setbg bg &
+else
+  autorandr --load mobile
+  bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+  setbg bg.back &
+fi
 
 # applications/commands on start
 setxkbmap -option caps:escape
@@ -19,7 +29,6 @@ numlockx &
 pgrep bspswallow || bspswallow &
 sxhkd &
 davmail &
-setbg &
 polybar default &
 
 # Unused monitors

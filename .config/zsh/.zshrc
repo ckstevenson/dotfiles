@@ -26,6 +26,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zstyle ':completion:*' completer _complete _approximate
 # better completion formatting
 zstyle ':completion:*:*:*:*:descriptions' format '%F{cyan}-- %d --%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 # better approximations formatting
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
 # use grouping
@@ -86,4 +88,5 @@ for f in ~/.config/shell/*; do source "$f"; done
 #source <(awless completion zsh)
 #complete -C '/usr/bin/aws_completer' /usr/bin/aws
 #eval "$(_MOLECULE_COMPLETE=zsh_source molecule)"
-source /etc/profile.d/autojump.sh
+#source /etc/profile.d/autojump.sh
+eval "$(zoxide init zsh --cmd cd)"

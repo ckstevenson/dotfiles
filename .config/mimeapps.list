@@ -28,6 +28,7 @@ x-scheme-handler/webcal=chromium.desktop
 x-scheme-handler/about=firefox.desktop
 x-scheme-handler/unknown=firefox.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/ferdium=ferdium.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;

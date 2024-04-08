@@ -1,5 +1,12 @@
 local mapper = function(mode, key, result, desc) vim.keymap.set(mode, key, result, { noremap = true, silent = true, desc = desc }) end
 
+--vim.filetype.add {
+--  extension = {
+--    jinja = 'jinja',
+--    jinja2 = 'jinja',
+--    j2 = 'jinja',
+--  },
+--}
 -- Essentials
 mapper("i", "jj", "<Esc>")
 mapper("n", "<leader>dts", [[:%s/\s\+$//e<CR>]], "Delete trailing spaces")

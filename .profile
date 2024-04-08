@@ -8,12 +8,12 @@ export STATUSBAR="polybar default"
 export FILE="lfub"
 export MAIL="aerc"
 export CAL=khal interactive
-export PATH="$PATH:/home/cameron/.local/bin:/bin:/sbin:/usr/sbin"
+export PATH="$PATH:/home/cameron/.local/bin:/home/cameron/.cargo/bin:/bin:/sbin:/usr/sbin"
 export PAGER="less"
 export WM="bspwm"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-#export MONITOR="$(xrandr | grep primary | cut -d' ' -f1'')"
-#LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+# export MONITOR="$(xrandr | grep primary | cut -d' ' -f1'')"
+# export LS_COLORS=$LS_COLORS:'di=0;35:'
 export WLAN=$(ls /sys/class/net | grep wl)
 export ETH=$(ls /sys/class/net | grep en | head -n 1)
 export BR=$(ls /sys/class/net | grep br)
@@ -27,6 +27,7 @@ export LIBVIRT_DEFAULT_URI="qemu:///system"
 export WINIT_X11_SCALE_FACTOR=1.66
 export SUDO_ASKPASS="/usr/lib/ssh/gnome-ssh-askpass3"
 export SSH_ASKPASS="/usr/lib/ssh/gnome-ssh-askpass3"
+export XDG_CURRENT_DESKTOP="gtk"
 
 export LF_ICONS="\
 di=:\
